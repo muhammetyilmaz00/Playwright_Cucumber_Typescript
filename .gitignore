@@ -1,0 +1,7 @@
+node_modules/
+test-results/
+.vscode/
+index.html
+assets/
+features/
+@rerun.txt
