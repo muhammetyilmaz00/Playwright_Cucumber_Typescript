@@ -27,7 +27,7 @@ Before you begin, ensure you have the following installed on your machine:
 2. Navigate to the project directory:
 
    ```bash
-   cd playwright-cucumber-typescript-ui-api
+   cd ValueBlue
 
 3. Install project dependencies using npm:
 
@@ -62,11 +62,14 @@ The project follows a standard Cypress project structure:
 
 * src/test/features: Includes feature files for Cucumber BDD.
 * src/test/steps: Includes step definitions of the feature files
-* support: Includes configuration settings of browser and report
+* support/config.ts: Includes configuration settings of browser
+* support/report.ts: Includes configuration settings of multiple-cucumber-html-reporter
+* support/apiContext.ts: Includes abstract implementation of the API context
+* support/contextStore.ts: Includes implementation of the context store 
 * node_modules: Dependencies installed via npm.
 * package.json: Configuration file with project metadata and dependencies.
 * tsconfig.json: TypeScript configuration file.
 
 ## TODO List
 
-- Setting the environment variables for the tests to the default values provided by the command line
+- Setting the environment variables (test, dev, staging, prod) for the tests to the default values provided by the command line

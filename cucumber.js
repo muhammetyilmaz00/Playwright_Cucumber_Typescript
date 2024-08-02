@@ -1,9 +1,14 @@
+const common = {
+  requireModule: ["ts-node/register"],
+  require: ["src/test/steps/**/*.ts", "src/test/steps/web/hooks.ts"],
+  paths: ["src/test/features/**/*.feature"],
+  dryRun: false,
+  tags: process.env.tags || "@regression",
+};
+
 module.exports = {
   default: {
-    paths: ["src/test/features/**/*.feature"],
-    dryRun: false,
-    require: ["src/test/steps/**/*.ts", "src/test/steps/web/hooks.ts"],
-    requireModule: ["ts-node/register"],
+    ...common,
     format: [
       "progress-bar",
       "html:test-results/cucumber-report.html",
@@ -12,14 +17,19 @@ module.exports = {
     ],
   },
   rerun: {
-    dryRun: false,
-    require: ["src/test/steps/**/*.ts", "src/test/steps/web/hooks.ts"],
-    requireModule: ["ts-node/register"],
     format: [
       "progress-bar",
       "html:test-results/cucumber-report.html",
       "json:test-results/cucumber-report.json",
       "rerun:@rerun.txt",
     ],
+  },
+  ci: {
+    ...common,
+    format: [
+      "json:test-results/cucumber-json-report.json",
+      "junit:test-results/cucumber-junit-report.xml",
+    ],
+    retry: 1,
   },
 };

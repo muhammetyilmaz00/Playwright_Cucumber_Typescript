@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "test": "cucumber-js test || true",
-    "posttest": "npx ts-node support/report.ts"
+    "posttest": "npx ts-node support/report.ts",
+    "test:ci": "npx cucumber-js -p ci && npm run posttest"
   },
   "keywords": [],
   "author": "",
