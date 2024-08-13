@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js test || true",
+    "test": "npx cucumber-js || true",
     "posttest": "npx ts-node support/report.ts",
     "test:ci": "npx cucumber-js -p ci && npm run posttest"
   },

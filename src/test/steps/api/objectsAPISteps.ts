@@ -10,7 +10,7 @@ When("I request to get all objects", async () => {
 });
 
 Then("the response status code should be {int}", async (statusCode: number) => {
-  expect(objectService.apiContext.response.status()).toEqual(statusCode);
+  expect(objectService.response.status()).toEqual(statusCode);
 });
 
 Then("the response objects must have the following fields", async (dataTable) => {
@@ -95,6 +95,6 @@ When("I request to partial update the object with the following details", async 
   await objectService.partialUpdateObject(hooks.context.get("objectId"), productDetails);
 
   // Validate that the response contains an 'updatedAt' timestamp.
-  const responseBody = JSON.parse(await objectService.apiContext.response.text());
+  const responseBody = JSON.parse(await objectService.response.text());
   expect(responseBody).toHaveProperty("updatedAt");
 });

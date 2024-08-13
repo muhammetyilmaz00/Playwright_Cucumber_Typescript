@@ -4,7 +4,6 @@ import { configurations } from '../../../../support/config'
 import { pageFixture } from "./pageFixture";
 import { ObjectsService } from "../../../apiService/objectsService";
 import { ContextStore } from "../../../../support/contextStore";
-// import { contextObject } from "../api/objectsAPISteps";
 
 // Launch options for the browser, with headless mode enabled/disabled.
 const options: LaunchOptions = {
@@ -64,7 +63,6 @@ After({ tags: '@createObject' }, async () => {
     // Delete the created object after all tests are done.
     console.log(`Deleting the created object at the after-step`);
     await objectService.deleteObject(contextStore.get("objectId"));
-    // await objectService.deleteObject(contextObject.context.get("objectId"));
 });
 
 AfterAll(async () => {

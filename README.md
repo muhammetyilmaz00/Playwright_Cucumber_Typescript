@@ -57,7 +57,7 @@ Sample report
 
 ## Project Structure
 
-The project follows a standard Cypress project structure:
+The project follows a standard Playwright project structure:
 
 
 * src/test/features: Includes feature files for Cucumber BDD.
