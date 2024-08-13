@@ -1,7 +1,7 @@
 const common = {
   requireModule: ["ts-node/register"],
   require: ["src/test/steps/**/*.ts", "src/test/steps/web/hooks.ts"],
-  paths: ["src/test/features/**/*.feature"],
+  paths: ["src/test/featureFiles/**/*.feature"],
   dryRun: false,
   tags: process.env.tags || "@regression",
 };

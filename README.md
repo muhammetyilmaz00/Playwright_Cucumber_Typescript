@@ -60,7 +60,7 @@ Sample report
 The project follows a standard Playwright project structure:
 
 
-* src/test/features: Includes feature files for Cucumber BDD.
+* src/test/featureFiles: Includes feature files for Cucumber BDD.
 * src/test/steps: Includes step definitions of the feature files
 * support/config.ts: Includes configuration settings of browser
 * support/report.ts: Includes configuration settings of multiple-cucumber-html-reporter
