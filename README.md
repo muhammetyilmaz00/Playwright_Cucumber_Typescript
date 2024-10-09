@@ -27,7 +27,7 @@ Before you begin, ensure you have the following installed on your machine:
 2. Navigate to the project directory:
 
    ```bash
-   cd ValueBlue
+   cd Playwright_Cucumber_Typescript
 
 3. Install project dependencies using npm:
 
