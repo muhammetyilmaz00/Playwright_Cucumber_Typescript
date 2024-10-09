@@ -22,7 +22,7 @@ Before you begin, ensure you have the following installed on your machine:
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/muhammetyilmaz00/ValueBlue.git
+   git clone https://github.com/muhammetyilmaz00/Playwright_Cucumber_Typescript.git
 
 2. Navigate to the project directory:
 
