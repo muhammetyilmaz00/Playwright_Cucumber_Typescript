@@ -7,7 +7,7 @@ import { ContextStore } from "../../../../support/contextStore";
 
 // Launch options for the browser, with headless mode enabled/disabled.
 const options: LaunchOptions = {
-    headless: true
+    headless: process.env.HEADLESS === 'true'
 };
 
 const objectService = new ObjectsService();
@@ -24,14 +24,17 @@ setDefaultTimeout(60000);
 BeforeAll(async () => {
     // Start the browser based on the configuration setting.
     console.log("Starting browser");
-    switch (configurations.browser) {
+    switch (process.env.BROWSER || configurations.browser) {
         case "firefox":
+            console.log("Starting firefox");
             browser = await firefox.launch(options);
             break;
         case "webkit":
+            console.log("Starting webkit");
             browser = await webkit.launch(options);
             break;
         default:
+            console.log("Starting chromium");
             browser = await chromium.launch(options);
     }
 });
