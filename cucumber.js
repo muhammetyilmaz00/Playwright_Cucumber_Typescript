@@ -12,7 +12,8 @@ module.exports = {
     parallel:2,
     format: [
       "progress-bar",
-      "allure-cucumberjs/reporter"
+      "allure-cucumberjs/reporter",
+      "rerun:@rerun.txt"
     ],
   },
   rerun: {
