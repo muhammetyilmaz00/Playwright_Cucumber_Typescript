@@ -1,5 +1,5 @@
 @regression @web
-Feature: Example
+Feature: Example Website (https://example.com)
 
 Scenario: FinishMe
    When I open the browser

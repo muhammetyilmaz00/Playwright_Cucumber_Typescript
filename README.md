@@ -9,7 +9,6 @@ This repository contains a Playwright and Cucumber project for automated testing
 - [Running Tests](#running-tests)
 - [Test Report](#test-report)
 - [Project Structure](#project-structure)
-- [TODO](#todo-list)
 
 ## Prerequisites
 
@@ -44,16 +43,22 @@ npm run test
 This will execute the Playwright tests in headless mode using the Chromium browser.
 
 ## Test Report
-After running the tests, you can find the HTML test report in the in the root of your project:
+After running the tests, you can find the Allure test report in the in the root of your project:
+
+The report should automatically be opened after running the tests. If not, execute these steps
+
+P.S: You must install allure into your machine - https://allurereport.org/docs/install/
+
+1. Run this command to generate allure report
 
 ```bash
-test-results/
-    or
-index.html
+allure generate --clean ./allure-results -o ./allure-report
 ```
-Sample report
+2. Run this command to open allure report
 
-![Report](report.png)
+```bash
+allure open ./allure-report
+```
 
 ## Project Structure
 
@@ -63,13 +68,9 @@ The project follows a standard Playwright project structure:
 * src/test/featureFiles: Includes feature files for Cucumber BDD.
 * src/test/steps: Includes step definitions of the feature files
 * support/config.ts: Includes configuration settings of browser
-* support/report.ts: Includes configuration settings of multiple-cucumber-html-reporter
 * support/apiContext.ts: Includes abstract implementation of the API context
 * support/contextStore.ts: Includes implementation of the context store 
 * node_modules: Dependencies installed via npm.
 * package.json: Configuration file with project metadata and dependencies.
 * tsconfig.json: TypeScript configuration file.
 
-## TODO List
-
-- Setting the environment variables (test, dev, staging, prod) for the tests to the default values provided by the command line

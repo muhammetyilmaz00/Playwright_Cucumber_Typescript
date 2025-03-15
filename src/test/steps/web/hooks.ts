@@ -7,7 +7,7 @@ import { ContextStore } from "../../../../support/contextStore";
 
 // Launch options for the browser, with headless mode enabled/disabled.
 const options: LaunchOptions = {
-    headless: process.env.HEADLESS === 'true'
+    headless: process.env.HEADLESS === 'true' || false
 };
 
 const objectService = new ObjectsService();

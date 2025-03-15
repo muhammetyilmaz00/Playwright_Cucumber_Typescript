@@ -1,7 +1,7 @@
 node_modules/
-test-results/
 .vscode/
-index.html
-assets/
-features/
 @rerun.txt
+.DS_Store
+/.DS_Store
+allure-results/
+allure-report/

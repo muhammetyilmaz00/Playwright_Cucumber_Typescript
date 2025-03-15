@@ -1,5 +1,5 @@
 @regression @api @objects
-Feature: Object
+Feature: Object API
 
   @getAllObjects
   Scenario: Get list of all objects
